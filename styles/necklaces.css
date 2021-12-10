@@ -1,83 +1,107 @@
-body{
-    margin: 0;
-    background-color: rgb(250, 219, 224);
+body {
+  position: relative;
+  top: 50px;
+  margin: 0;
+  opacity: 0;
+  background-color: rgb(250, 219, 224);
+  transition: all 0.5s;
 }
-.Heading1{
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
-    text-decoration-color: black;
+.Heading1 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  text-decoration-color: black;
+}
+.heading2 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+.logo {
+  width: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50% s;
+}
+.section1 {
+  background-color: rgb(250, 219, 224);
+}
+nav {
+  background-color: rgb(97, 66, 66);
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+ul {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  padding-inline-start: 40px;
+}
+nav ul li {
+  display: inline-block;
+  padding: 10px 15px 9px 15px;
+  background-color: rgb(197, 144, 144);
+  font-weight: bold;
+}
+a {
+  text-decoration: solid;
+  color: rgb(245, 245, 245);
+}
+div.gallery {
+  border: 1px solid #ccc;
+}
 
+div.gallery:hover {
+  border: 1px solid #777;
 }
-.heading2{
-text-align: center;
-font-family: 'Times New Roman', Times, serif;
-font-size: 20px;
+
+div.gallery img {
+  width: 100%;
+  height: auto;
 }
-.logo{width: 80px; display: block; margin-left: auto;
-     margin-right: auto; border-radius: 50%
-s
+
+div.desc {
+  padding: 15px;
+  text-align: center;
 }
-.section1{
-    background-color: rgb(250, 219, 224);
+
+* {
+  box-sizing: border-box;
 }
-nav{
-    background-color: rgb(97, 66, 66);
-    display:block;
+
+.responsive {
+  padding: 0 6px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
 }
-nav ul{
-    list-style: none;}
-    ul {display: block; margin-block-start: 1em;
-         margin-block-end: 1em; margin-inline-end: 0px;
-          margin-inline-start: 0px; padding-inline-start: 40px;}
-          nav ul li {display: inline-block; padding: 10px 15px 9px 15px;
-             background-color:rgb(197, 144, 144); font-weight: bold;}
-          a {text-decoration: solid; color: rgb(245, 245, 245);
-        padding-left: 50px;
-   }
-   div.gallery {
-    border: 1px solid #ccc;
+
+.showing {
+  top: 0;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .slideshow-container {
+    width: 70%;
   }
-  
-  div.gallery:hover {
-    border: 1px solid #777;
+}
+
+@media only screen and (max-width: 590px) {
+  .slideshow-container {
+    width: 90%;
   }
-  
-  div.gallery img {
-    width: 100%;
-    height: auto;
-  }
-  
-  div.desc {
-    padding: 15px;
-    text-align: center;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  .responsive {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
-  }
-  
-  @media only screen and (max-width: 700px) {
-    .responsive {
-      width: 49.99999%;
-      margin: 6px 0;
-    }
-  }
-  
-  @media only screen and (max-width: 500px) {
-    .responsive {
-      width: 100%;
-    }
-  }
-  
-  .clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}

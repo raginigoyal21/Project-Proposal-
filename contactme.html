@@ -1,129 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="photos/png" href="photos/favicon-16x16.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="photos/png" href="photos/favicon-16x16.png" />
 
     <title>Document</title>
     <style>
-          body{
-    margin: 0;
-    background-color: rgb(250, 219, 224);
-}
-.Heading1{
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
-    text-decoration-color: black;
-
-}
-.heading2{
-text-align: center;
-font-family: 'Times New Roman', Times, serif;
-font-size: 20px;
-}
-.logo{width: 80px; display: block; margin-left: auto;
-     margin-right: auto; border-radius: 50%
-
-}
-.section1{
-    background-color: rosybrown;
-}
-nav{
-    background-color: rgb(97, 66, 66);
-    display:block;
-}
-nav ul{
-    list-style: none;}
-    ul {display: block; margin-block-start: 1em;
-         margin-block-end: 1em; margin-inline-end: 0px;
-          margin-inline-start: 0px; padding-inline-start: 40px;}
-          nav ul li {display: inline-block; padding: 10px 15px 9px 15px;
-             background-color:rgb(197, 144, 144); font-weight: bold;}
-          a {text-decoration: solid; color: rgb(245, 245, 245);
+      body {
+        position: relative;
+        top: 50px;
+        margin: 0;
+        opacity: 0;
+        background-color: rgb(250, 219, 224);
+        transition: all 0.5s;
+      }
+      .Heading1 {
+        text-align: center;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 30px;
+        text-decoration-color: black;
+      }
+      .heading2 {
+        text-align: center;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 20px;
+      }
+      .logo {
+        width: 80px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+      }
+      .section1 {
+        background-color: rosybrown;
+      }
+      nav {
+        background-color: rgb(97, 66, 66);
+        display: block;
+      }
+      nav ul {
+        list-style: none;
+      }
+      ul {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-end: 0px;
+        margin-inline-start: 0px;
+        padding-inline-start: 40px;
+      }
+      nav ul li {
+        display: inline-block;
+        padding: 10px 15px 9px 15px;
+        background-color: rgb(197, 144, 144);
+        font-weight: bold;
+      }
+      a {
+        text-decoration: solid;
+        color: rgb(245, 245, 245);
         padding-left: 50px;
-        padding-top:20px; padding bottom:20px;
-   }
-        form{background-color:rgb(233, 216, 224);}
-        .TC{color: black}
-      
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      form {
+        background-color: rgb(233, 216, 224);
+      }
+      .TC {
+        color: black;
+      }
+
+      .showing {
+        top: 0;
+        opacity: 1;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="section1">
-        <h1 class="Heading1"> VRJewels</h1>
-        <h2 class="heading2">Jewelry Shop For All</h2>
+      <h1 class="Heading1">VRJewels</h1>
+      <h2 class="heading2">Jewelry Shop For All</h2>
     </div>
-    <img class="logo" src="photos/VR Jewels.png" alt="Vrjewels" title="VRjewels"/>
+    <img
+      class="logo"
+      src="photos/VR Jewels.png"
+      alt="Vrjewels"
+      title="VRjewels"
+    />
     <nav>
-        <ul>
-            <li><a class="home" href="index.html"> Home </a></li>
-            <li><a class="aboutus" href="Aboutus.html"> About Us </a></li>
-            <li><a class="rings" href="rings.html"> Rings </a></li>
-            <li><a class="necklaces" href="necklaces.html"> Necklaces </a></li>
-            <li><a class="contactus"  href="contactme.html"> Contact Us </a></li>
-            <li><a class="sitemap" href="sitemap.html"> Site Map</a></li>
-        </ul>
-        </nav>
-    <h1> Contact Us</h1>
-    <form  method="post" action="https://oim-apis.herokuaoo.com/form2">
-        <label class="TC" for="First Name"> First Name:</label>
-        <input
+      <ul>
+        <li><a class="home" href="index.html"> Home </a></li>
+        <li><a class="aboutus" href="Aboutus.html"> About Us </a></li>
+        <li><a class="rings" href="rings.html"> Rings </a></li>
+        <li><a class="necklaces" href="necklaces.html"> Necklaces </a></li>
+        <li><a class="contactus" href="contactme.html"> Contact Us </a></li>
+        <li><a class="sitemap" href="sitemap.html"> Site Map</a></li>
+      </ul>
+    </nav>
+    <h1>Contact Us</h1>
+    <form method="post" action="https://oim-apis.herokuaoo.com/form2">
+      <label class="TC" for="First Name"> First Name:</label>
+      <input
         type="text"
-        id= "First Name"
-        name= "First Name"
+        id="First Name"
+        name="First Name"
         maxlenght="100"
         placeholder="First Name"
-        />
-        <br>
-        <br>
-        <label class="TC" for="Last Name"> Last Name:</label>
-        <input
+        required
+      />
+      <br />
+      <br />
+      <label class="TC" for="Last Name"> Last Name:</label>
+      <input
         type="text"
-        id= "Last Name"
-        name= "Last Name"
+        id="Last Name"
+        name="Last Name"
         maxlenght="100"
         placeholder="Last Name"
-        />
-        <br>
-        <br>
-        <label class="TC" for="Email"> Email:</label>
-        <input
-        type="text"
-        id= "Email"
-        name= "Email"
+        required
+      />
+      <br />
+      <br />
+      <label class="TC" for="Email"> Email:</label>
+      <input
+        type="email"
+        id="Email"
+        name="Email"
         maxlenght="100"
         placeholder="Email address"
-        />
-        <br>
-        <br>
-<div>
-    <div>
-        <label class="TC" for="comments"> Leave a Reply:</label>
-    </div>
-    <div>
-        <textarea
-id="comments"
-name="comments"
-rows="5"
-cols="25"
-Placeholder=" Enter your comment here..."
-        ></textarea>
-    </div>
-</div>
-<button type="submit"> Submit
-</button>
-<button type="reset">
-   Reset
-</button>
-<H1>Contact Information:</H1>
-<p>Tel: +1 617-901-9585</p>
-<p>Email:<a href="raginigoyal123@gmail.com"> raginigoyal123@mail.com </a></p>
-<p> Operational Adress:
-    345 Harrison ave,Boston, MA 02118, Apt357
-</p>
+        required
+      />
+      <br />
+      <br />
+      <div>
+        <div>
+          <label class="TC" for="comments"> Leave a Reply:</label>
+        </div>
+        <div>
+          <textarea
+            id="comments"
+            name="comments"
+            rows="5"
+            cols="25"
+            placeholder=" Enter your comment here..."
+            required
+          ></textarea>
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+      <h1>Contact Information:</h1>
+      <p>Tel: +1 617-901-9585</p>
+      <p>
+        Email:<a href="raginigoyal123@gmail.com"> raginigoyal123@mail.com </a>
+      </p>
+      <p>Operational Adress: 345 Harrison ave,Boston, MA 02118, Apt357</p>
     </form>
-</body>
+
+    <script>
+      window.onload = function () {
+        document.body.classList.add("showing");
+      };
+    </script>
+  </body>
 </html>

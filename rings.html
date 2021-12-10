@@ -1,72 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="photos/png" href="photos/favicon-16x16.png">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="photos/png" href="photos/favicon-16x16.png" />
 
     <title>Document</title>
-    <link rel="stylesheet" href="styles/rings.css"
-</head>
-<body>
+    <link rel="stylesheet" href="styles/rings.css" />
+  </head>
+  <body>
     <div class="section1">
-        <h1 class="Heading1"> VRJewels</h1>
-        <h2 class="heading2">Jewelry Shop For All</h2>
+      <h1 class="Heading1">VRJewels</h1>
+      <h2 class="heading2">Jewelry Shop For All</h2>
     </div>
-    <img class="logo" src="photos/VR Jewels.png" alt="Vrjewels" title="VRjewels"/>
+    <img
+      class="logo"
+      src="photos/VR Jewels.png"
+      alt="Vrjewels"
+      title="VRjewels"
+    />
     <nav>
-        <ul>
-            <li><a class="home" href="index.html"> Home </a></li>
-            <li><a class="aboutus" href="Aboutus.html"> About Us </a></li>
-            <li><a class="rings" href="rings.html"> Rings </a></li>
-            <li><a class="necklaces" href="necklaces.html"> Necklaces </a></li>
-            <li><a class="contactus"  href="contactme.html"> Contact Us </a></li>
-            <li><a class="sitemap" href="sitemap.html"> Site Map</a></li>
-        </ul>
-        </nav>
-        <h1>Animal Collection: The Wild Side</h1>
-        <div class="responsive">
-            <div class="gallery">
-              <a target="_blank" href="photos/IRM_2283.JPG">
-                <img src="photos/IRM_2283.JPG" alt="Ring 1" width="600" height="400">
-              </a>
-              <div class="desc">18k Gold Diamond Snake Ring: $1100</div>
-            </div>
-          </div>
-          
-          
-          <div class="responsive">
-            <div class="gallery">
-              <a target="_blank" href="photos/IRM_2204.JPG">
-                <img src="photos/IRM_2204.JPG" alt="Ring 2" width="600" height="400">
-              </a>
-              <div class="desc">18kt Gold Diamond With Emerald Panther Ring: $2570</div>
-            </div>
-          </div>
-          
-          <div class="responsive">
-            <div class="gallery">
-              <a target="_blank" href="photos/IRM_2250.JPG">
-                <img src="photos/IRM_2250.JPG" alt="Ring 3" width="600" height="400">
-              </a>
-              <div class="desc">18kt Gold, White and Black Diamond Snake Ring: $2800</div>
-            </div>
-          </div>
-          
-          <div class="responsive">
-            <div class="gallery">
-              <a target="_blank" href="photos/IRM_2202.JPG">
-                <img src="photos/IRM_2202.JPG" alt="Ring 4" width="600" height="400">
-              </a>
-              <div class="desc">18kt Gold and Multi Gemstone Peacock Ring: $2600</div>
-            </div>
-          </div>
-          
-          <div class="clearfix"></div>
-          
-          <div style="padding:6px;">
-   
-</body>
+      <ul>
+        <li><a class="home" href="index.html"> Home </a></li>
+        <li><a class="aboutus" href="Aboutus.html"> About Us </a></li>
+        <li><a class="rings" href="rings.html"> Rings </a></li>
+        <li><a class="necklaces" href="necklaces.html"> Necklaces </a></li>
+        <li><a class="contactus" href="contactme.html"> Contact Us </a></li>
+        <li><a class="sitemap" href="sitemap.html"> Site Map</a></li>
+      </ul>
+    </nav>
+    <h1>Animal Collection: The Wild Side</h1>
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="photos/IRM_2283.JPG">
+          <img
+            src="photos/IRM_2283.JPG"
+            alt="Ring 1"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">18k Gold Diamond Snake Ring: $1100</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="photos/IRM_2204.JPG">
+          <img
+            src="photos/IRM_2204.JPG"
+            alt="Ring 2"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">
+          18kt Gold Diamond With Emerald Panther Ring: $2570
+        </div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="photos/IRM_2250.JPG">
+          <img
+            src="photos/IRM_2250.JPG"
+            alt="Ring 3"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">
+          18kt Gold, White and Black Diamond Snake Ring: $2800
+        </div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="photos/IRM_2202.JPG">
+          <img
+            src="photos/IRM_2202.JPG"
+            alt="Ring 4"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">18kt Gold and Multi Gemstone Peacock Ring: $2600</div>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div style="padding: 6px"></div>
+
+    <script>
+      // selecting elements
+      const allResp = document.querySelectorAll(".responsive");
+
+      // adding event listener on all elements
+      allResp.forEach((resp) => {
+        // mouseover event
+        resp.addEventListener("mouseover", function (e) {
+          resp.style.transform = "scale(1.1)";
+          allResp.forEach((resp2) => {
+            if (resp !== resp2) {
+              resp2.style.transform = "scale(1)";
+            }
+          });
+        });
+
+        // mouse end event
+        resp.addEventListener("mouseout", function (e) {
+          resp.style.transform = "scale(1)";
+        });
+      });
+    </script>
+
+    <script>
+      window.onload = function () {
+        document.body.classList.add("showing");
+      };
+    </script>
+  </body>
 </html>

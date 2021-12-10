@@ -8,7 +8,16 @@
 
 
     <title>Document</title>
-    <link rel="stylesheet" href="styles/rings.css"
+    <link rel="stylesheet" href="styles/necklaces.css" />
+    <style>
+      .slideshow-container {
+        position: relative;
+        width: 50%;
+        margin: 0 auto;
+        height: 80vh;
+        overflow: hidden;
+      }
+    </style>
 </head>
 <body>
   <div>
@@ -28,6 +37,7 @@
         </ul>
         </nav>
         <h1>The Gilletari Collection</h1>
+        <div class="slideshow-container">
         <div class="responsive">
             <div class="gallery">
               <a target="_blank" href="photos/IRM_2129.JPG">
@@ -64,10 +74,42 @@
               <div class="desc">14kt White Gold Diamond Pendant Necklace:$1155 </div>
             </div>
           </div>
+        </div>
           
           <div class="clearfix"></div>
           
-          <div style="padding:6px;">
-   
+          <div style="padding:6px;"></div>
+          <script>
+            const allResp = document.querySelectorAll(".responsive")
+
+            let slideNow = 0;
+            let maxSld = allResp.length - 1;
+
+            const slideChange = function() {
+              if(slideNow === maxSld) {
+                slideNow = 0
+              } else {
+                slideNow++
+              }
+            }
+
+            setInterval(function() {
+              allResp.forEach((resp, i) => {
+                resp.style.left = `${slideNow-i}00%`
+              })
+              slideChange()
+            }, 3000)
+
+
+            // init
+            allResp.forEach((resp, i) => {
+                resp.style.left = `${slideNow-i}00%`
+            })
+          </script> 
+    <script>
+      window.onload = function () {
+        document.body.classList.add("showing");
+      };
+    </script>
 </body>
 </html>
